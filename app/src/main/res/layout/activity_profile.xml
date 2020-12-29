@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ProfileActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Akun Profil"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="sans-serif-medium"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="20dp"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_photoku" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Lengkap"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="30dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Lengkap"
+            android:fontFamily="sans-serif"
+            android:textSize="16sp"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Alamat Email"
+            android:textColor="@color/colorPrimary"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textSize="16sp"
+                android:focusable="false"
+                android:inputType="textEmailAddress"
+                android:textColor="@android:color/black" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:id="@+id/img_verified"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    app:layout_constraintVertical_bias="0.38"
+                    app:srcCompat="@drawable/ic_verified"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <ImageView
+                    android:id="@+id/img_unverified"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_unverified"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nomor Ponsel"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPrimary"/>
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:focusableInTouchMode="false"
+            android:hint="Nomor Telepon"
+            android:inputType="phone"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txtChangePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Ganti Password"
+        android:textColor="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:text="Simpan"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+    <Button
+        android:id="@+id/btnKeluar"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:text="Keluar"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/txtmintaverifikasi2"
+        android:layout_marginTop="10dp"
+        android:text="Kami telah mengirim email verifikasi ke\nalamat email ini. Tidak Menerimanya?"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtmintaverifikasi"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"
+        android:layout_marginLeft="30dp"
+        android:text="Minta email verifikasi lain"/>
+</LinearLayout>

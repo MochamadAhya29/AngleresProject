@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/search_bisnis"
+        android:title="Search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/troli_bisnis"
+        android:title="Troli"
+        android:icon="@drawable/ic_shopping"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/menu_bisnis"
+        android:title="Menu"
+        app:showAsAction="never"/>
+</menu>

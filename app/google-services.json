@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "988915155574",
+    "project_id": "angleres-project",
+    "storage_bucket": "angleres-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988915155574:android:99a17d960ef4633aafd557",
+        "android_client_info": {
+          "package_name": "com.mochamadahya.angleres"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988915155574-5782vqeb1ahm7vt64n7jongl81aep3o1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTyLFCANlXYcpBxejc4JI_TRkx2Vkdm9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988915155574-5782vqeb1ahm7vt64n7jongl81aep3o1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

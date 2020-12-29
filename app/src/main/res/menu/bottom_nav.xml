@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/itemHome"
+        android:title="Beranda"
+        android:icon="@drawable/ic_home__outlined2"/>
+
+    <item
+        android:id="@+id/itemFeed"
+        android:title="Feed"
+        android:icon="@drawable/ic_antenna"/>
+
+    <item
+        android:id="@+id/itemPesan"
+        android:title="Pesan"
+        android:icon="@drawable/ic_chat"/>
+
+    <item
+        android:id="@+id/itemTroli"
+        android:title="Troli"
+        android:icon="@drawable/ic_outline_shop"/>
+
+    <item
+        android:id="@+id/itemAkun"
+        android:title="Akun"
+        android:icon="@drawable/ic_outline_account"/>
+
+
+</menu>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mochamadahya.angleres">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AngleresProject">
+        <activity android:name=".coba.CobaActivity"></activity>
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".videostreamer.VideoStreamPlayer" />
+        <activity
+            android:name=".activity.AddVideoBeritaActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".activity.lokasi.KolamActivity"
+            android:parentActivityName=".activity.LokasiActivity" />
+        <activity
+            android:name=".activity.lokasi.SungaiActivity"
+            android:parentActivityName=".activity.LokasiActivity" />
+        <activity
+            android:name=".activity.lokasi.LautActivity"
+            android:parentActivityName=".activity.LokasiActivity" />
+        <activity
+            android:name=".activity.lokasi.DanauActivity"
+            android:parentActivityName=".activity.LokasiActivity" />
+        <activity
+            android:name=".activity.auth.UpdateEmailActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".activity.auth.ResetPasswordActivity"
+            android:parentActivityName=".activity.auth.LoginActivity" />
+        <activity
+            android:name=".activity.auth.ChangePasswordActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".activity.auth.RegisterActivity"
+            android:theme="@style/Theme.AngleresProject.NoActionBar" />
+        <activity
+            android:name=".activity.auth.LoginActivity"
+            android:theme="@style/Theme.AngleresProject.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.VideoActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".activity.TokoActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".activity.PenyewaanActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".activity.LiveStreamingActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".activity.EventActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".activity.BisnisActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".activity.LokasiActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AngleresProject.NoActionBar" />
+    </application>
+
+</manifest>
