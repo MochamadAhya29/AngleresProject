@@ -143,6 +143,11 @@ class VideoStreamPlayer : AppCompatActivity() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        releasePlayer()
+    }
+
     private fun releasePlayer() {
 
         if (player != null) {
@@ -173,6 +178,7 @@ class VideoStreamPlayer : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+        releasePlayer()
         finish()
         super.onBackPressed()
 

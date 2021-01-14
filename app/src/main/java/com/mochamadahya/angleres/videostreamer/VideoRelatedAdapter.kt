@@ -52,7 +52,7 @@ class VideoRelatedAdapter(val context: Context, val videoList: ArrayList<VideoLi
                 tvDescription.text = listItem.description
                 Glide.with(itemView.context).load(listItem.thumb).into(ivThumbnail)
                 val stLog = "title: ${listItem.title}, des: ${listItem.description}, img: ${listItem.thumb}"
-                Log.e("ViRelaAd", stLog)
+                Log.d("ViRelaAd", stLog)
             }
         }
 
