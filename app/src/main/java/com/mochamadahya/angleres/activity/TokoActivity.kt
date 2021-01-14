@@ -1,5 +1,7 @@
 package com.mochamadahya.angleres.activity
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -9,6 +11,11 @@ class TokoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_toko)
+
+        val sp = getSharedPreferences("Name", Context.MODE_PRIVATE)
+        val spedit = sp.edit()
+        spedit.putString("key", "value")
+        spedit.apply()
 
         setTitle("Toko")
     }
