@@ -14,37 +14,48 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="100dp"
             android:background="?attr/colorPrimary">
 
-            <TextView
-                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-                android:id="@+id/toolbar_title"
-                android:layout_gravity="center"
-                android:text="Beranda"
-                android:textColor="#ffff"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:id="@+id/toolbar_title"
+                    android:layout_gravity="center"
+                    android:text="Beranda"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#ffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:focusableInTouchMode="false"
+                    android:keyboardNavigationCluster="true"
+                    android:hint="Telusuri"
+                    android:background="@drawable/search"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:id="@+id/sv_home">
+
+                </EditText>
+
+            </LinearLayout>
+
+
+
         </androidx.appcompat.widget.Toolbar>
 
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:drawableRight="@drawable/ic_search"
-            android:padding="10dp"
-            android:textSize="15sp"
-            android:paddingLeft="10dp"
-            android:hint="Mau apa Hari ini ?"
-            android:background="@drawable/search"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:id="@+id/sv_home">
-
-        </EditText>
 
 
         <androidx.cardview.widget.CardView
@@ -52,6 +63,7 @@
             android:layout_height="150dp"
             android:layout_marginLeft="10dp"
             app:cardCornerRadius="10dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp">
 
             <com.synnapps.carouselview.CarouselView
@@ -74,7 +86,6 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
             android:background="#DCDCDC"/>
 
 
@@ -329,6 +340,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_add"
+                android:background="@color/colorPrimary"
                 android:visibility="visible"
                 android:layout_marginRight="10dp"
                 android:id="@+id/img_addvideo"/>
@@ -347,39 +359,39 @@
 
         </androidx.cardview.widget.CardView>
 
-        <com.facebook.shimmer.ShimmerFrameLayout
-            android:id="@+id/shimmer_layout"
-            android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_height="match_parent"
-            app:shimmer_duration="800"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+<!--        <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--            android:id="@+id/shimmer_layout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginRight="10dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:shimmer_duration="800"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical">-->
 
-                <include layout="@layout/videoall_shimmer_placeholder" />
+<!--                <include layout="@layout/videoall_shimmer_placeholder" />-->
 
-                <include layout="@layout/videoall_shimmer_placeholder" />
+<!--                <include layout="@layout/videoall_shimmer_placeholder" />-->
 
-                <include layout="@layout/videoall_shimmer_placeholder" />
+<!--                <include layout="@layout/videoall_shimmer_placeholder" />-->
 
-                <include layout="@layout/videoall_shimmer_placeholder" />
+<!--                <include layout="@layout/videoall_shimmer_placeholder" />-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
-        </com.facebook.shimmer.ShimmerFrameLayout>
+<!--        </com.facebook.shimmer.ShimmerFrameLayout>-->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_video_home"
-            android:visibility="gone"
             android:layout_marginTop="10dp"
+            tools:listitem="@layout/posts_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"

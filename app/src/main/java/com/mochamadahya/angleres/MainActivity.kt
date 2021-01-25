@@ -8,48 +8,49 @@ import com.mochamadahya.angleres.fragment.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        when(item.itemId){
+            R.id.itemHome -> {
+                moveToFragment(HomeFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.itemFeed -> {
+                moveToFragment(FeedFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.itemPesan -> {
+                moveToFragment(PesanFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.itemTroli -> {
+                moveToFragment(TroliFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+            R.id.itemAkun -> {
+                moveToFragment(ProfileFragment())
+                return@OnNavigationItemSelectedListener true
+            }
+        }
+        false
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        bottom_nav.setOnNavigationItemSelectedListener (onBottomNavListener)
+        val navView: BottomNavigationView = findViewById(R.id.bottom_nav)
 
-        val frag = supportFragmentManager.beginTransaction()
-        frag.add(R.id.frame_container,
-            HomeFragment()
-        )
-        frag.commit()
+        navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+
+        moveToFragment(HomeFragment())
     }
 
-    private val onBottomNavListener = BottomNavigationView.OnNavigationItemSelectedListener { i->
-
-        var selectedFragment: Fragment = HomeFragment()
-        when(i.itemId){
-            R.id.itemHome -> {
-                selectedFragment = HomeFragment()
-            }
-
-            R.id.itemFeed -> {
-                selectedFragment = FeedFragment()
-            }
-
-            R.id.itemPesan -> {
-                selectedFragment = PesanFragment()
-            }
-
-            R.id.itemTroli -> {
-                selectedFragment = TroliFragment()
-            }
-
-            R.id.itemAkun -> {
-                selectedFragment = ProfileFragment()
-            }
-        }
-        val frag = supportFragmentManager.beginTransaction()
-        frag.replace(R.id.frame_container, selectedFragment)
-        frag.commit()
-
-        true
+    private fun moveToFragment(fragment: Fragment) {
+        val fragmentTrans = supportFragmentManager.beginTransaction()
+        fragmentTrans.replace(R.id.frame_container, fragment)
+        fragmentTrans.commit()
 
     }
 

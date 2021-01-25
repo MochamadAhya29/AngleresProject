@@ -110,4 +110,7 @@ dependencies {
     implementation 'com.google.android.exoplayer:exoplayer-hls:2.10.8'
     implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.10.8'
     implementation 'com.google.android.exoplayer:exoplayer-ui:2.10.8'
+
+    //Crop Image
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
 }

@@ -7,11 +7,11 @@
     android:background="#E8E8E8"
     android:padding="10dp"
     android:orientation="vertical"
-    tools:context=".activity.AddVideoBeritaActivity">
+    tools:context=".activity.UploadingVideoActivity">
 
 
     <EditText
-        android:id="@+id/judul_post"
+        android:id="@+id/jdl_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
@@ -24,34 +24,34 @@
         android:textColor="@android:color/black"/>
 
     <EditText
-        android:id="@+id/deskripsi_post"
+        android:id="@+id/desk_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
         android:hint="Deskripsi"
         android:padding="10dp"
         android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="@id/judul_post"
-        app:layout_constraintEnd_toEndOf="@id/judul_post"
-        app:layout_constraintTop_toBottomOf="@id/judul_post"
+        app:layout_constraintStart_toStartOf="@id/jdl_post"
+        app:layout_constraintEnd_toEndOf="@id/jdl_post"
+        app:layout_constraintTop_toBottomOf="@id/jdl_post"
         android:inputType="textPersonName|textCapSentences"
         android:textColor="@android:color/black"/>
 
     <VideoView
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:id="@+id/video_post"
+        android:id="@+id/videoview"
         android:src="@drawable/ic_add"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/deskripsi_post"
+        app:layout_constraintTop_toBottomOf="@id/desk_post"
         android:layout_marginTop="5dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnSavePost"
-        app:layout_constraintTop_toBottomOf="@id/video_post"
+        android:id="@+id/btnSaveAja"
+        app:layout_constraintTop_toBottomOf="@id/videoview"
         android:text="Upload"
         android:layout_marginTop="5dp"/>
 
@@ -62,12 +62,12 @@
         android:layout_height="wrap_content"
         android:indeterminate="true"
         android:indeterminateTint="@color/colorPrimary"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="10dp" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/pickVideoFab"
+        android:id="@+id/pickVideoFabUpload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"

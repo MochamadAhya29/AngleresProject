@@ -21,6 +21,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.mochamadahya.angleres.R
+import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_video_stream_player.*
 
 class VideoStreamPlayer : AppCompatActivity() {
@@ -72,6 +73,7 @@ class VideoStreamPlayer : AppCompatActivity() {
             }
 
         })
+
 
         tv_title.text = videoTitle
         tv_description.text = videoDes

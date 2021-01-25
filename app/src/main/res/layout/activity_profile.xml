@@ -49,6 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nama Lengkap"
+            android:backgroundTint="@color/colorPrimary"
             android:fontFamily="sans-serif"
             android:textSize="16sp"
             android:inputType="textPersonName"

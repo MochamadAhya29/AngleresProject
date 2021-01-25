@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".videostreamer.VideoStreamPlayer">
+    tools:context=".activity.DetailActivity">
 
-    <com.google.android.exoplayer2.ui.PlayerView
-        android:id="@+id/exo_player"
+    <ImageView
+        android:id="@+id/img_detail"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        app:layout_constraintTop_toBottomOf="@id/exo_player"
+        app:layout_constraintTop_toBottomOf="@id/img_detail"
         android:layout_marginBottom="5dp"
         android:orientation="horizontal">
 
@@ -40,28 +40,23 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/img_unlike"
+                android:id="@+id/img_like_detail"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:src="@drawable/ic_like" />
-            <ImageView
-                android:id="@+id/img_like"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/ic_likee" />
 
 
         </RelativeLayout>
 
         <ImageView
-            android:id="@+id/img_comment"
+            android:id="@+id/img_comment_detail"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginLeft="10dp"
             android:src="@drawable/ic_chat" />
 
         <ImageView
-            android:id="@+id/img_sharing"
+            android:id="@+id/img_sharing_detail"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginLeft="10dp"
@@ -76,21 +71,21 @@
         android:text="Likes"
         app:layout_constraintTop_toBottomOf="@id/linearlayoutplay"
         android:layout_margin="10dp"
-        android:id="@+id/txt_like"/>
+        android:id="@+id/txt_like_detail"/>
 
     <TextView
-        android:id="@+id/tv_title"
+        android:id="@+id/tv_title_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_like"
+        app:layout_constraintTop_toBottomOf="@id/txt_like_detail"
         tools:text="Title" />
 
     <TextView
-        android:id="@+id/tv_description"
+        android:id="@+id/tv_description_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="8dp"
@@ -99,26 +94,26 @@
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_detail"
         tools:text="Firstly, This activity implements the Main Activity Presenter.View Interface through which it’s overridden method will be called. Secondly, we have to create the MainActivityPresenter object with view as a constructor. We use this presenter object to listen the user input and update the data as well as view" />
 
-    <TextView
-        android:id="@+id/tv_related"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:textSize="20sp"
-        android:text="Related Video"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_description" />
+<!--    <TextView-->
+<!--        android:id="@+id/tv_related"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="8dp"-->
+<!--        android:textSize="20sp"-->
+<!--        android:text="Related Video"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_description" />-->
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_related" />
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recycleView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tv_related" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

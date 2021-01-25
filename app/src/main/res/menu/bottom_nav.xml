@@ -5,27 +5,27 @@
     <item
         android:id="@+id/itemHome"
         android:title="Beranda"
-        android:icon="@drawable/ic_home__outlined2"/>
+        android:icon="@drawable/home_selector"/>
 
     <item
         android:id="@+id/itemFeed"
         android:title="Feed"
-        android:icon="@drawable/ic_antenna"/>
+        android:icon="@drawable/feed_selector"/>
 
     <item
         android:id="@+id/itemPesan"
         android:title="Pesan"
-        android:icon="@drawable/ic_chat"/>
+        android:icon="@drawable/chat_selector"/>
 
     <item
         android:id="@+id/itemTroli"
         android:title="Troli"
-        android:icon="@drawable/ic_outline_shop"/>
+        android:icon="@drawable/shop_selector"/>
 
     <item
         android:id="@+id/itemAkun"
         android:title="Akun"
-        android:icon="@drawable/ic_outline_account"/>
+        android:icon="@drawable/account_selector"/>
 
 
 </menu>

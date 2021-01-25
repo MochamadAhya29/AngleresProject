@@ -60,12 +60,30 @@ class ProfileActivity : AppCompatActivity() {
         val ivProfile: CircleImageView = findViewById(R.id.ivProfile)
 
 
+
         btnKeluar.setOnClickListener {
-            auth.signOut()
-            Intent(this, LoginActivity::class.java).also {
-                it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(it)
+
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Angleres")
+            builder.setMessage("Apakah anda yakin ingin keluar?")
+
+            builder.setPositiveButton("Ya") { dialog, which ->
+                auth.signOut()
+                Intent(this, LoginActivity::class.java).also {
+                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(it)
+                    Toast.makeText(applicationContext,
+                        "Anda sudah keluar", Toast.LENGTH_SHORT).show()
+                }
             }
+
+            builder.setNegativeButton("Tidak") { dialog, which ->
+                Toast.makeText(applicationContext,
+                   "Batal", Toast.LENGTH_SHORT).show()
+            }
+
+            builder.show()
+
         }
 
         btnUpdate.setOnClickListener {

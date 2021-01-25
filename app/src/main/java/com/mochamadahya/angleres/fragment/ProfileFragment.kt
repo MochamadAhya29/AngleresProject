@@ -68,12 +68,12 @@ class ProfileFragment : Fragment() {
         linearLayoutProfile.setOnClickListener {
             startActivity(Intent(context, ProfileActivity::class.java))
         }
-        txt_ubah_email.setOnClickListener {
-            startActivity(Intent(context, UpdateEmailActivity::class.java))
-        }
-        txt_ubah_password.setOnClickListener {
-            startActivity(Intent(context, ResetPasswordActivity::class.java))
-        }
+//        txt_ubah_email.setOnClickListener {
+//            startActivity(Intent(context, UpdateEmailActivity::class.java))
+//        }
+//        txt_ubah_password.setOnClickListener {
+//            startActivity(Intent(context, ResetPasswordActivity::class.java))
+//        }
 
     }
 
