@@ -17,6 +17,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.storage.FirebaseStorage
@@ -60,7 +61,10 @@ class ProfileFragment : Fragment() {
         val user  = auth.currentUser
 
 
-        Picasso.get().load(user?.photoUrl).into(img_profil)
+        Glide.with(view)
+            .load(user?.photoUrl)
+            .into(img_profil)
+
         txtUserProfil.setText(user?.displayName)
         txtEmailProfil.setText(user?.email)
 

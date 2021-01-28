@@ -31,7 +31,9 @@
             android:name=".activity.ProfileActivity"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".videostreamer.VideoStreamPlayer" />
-        <activity android:name=".activity.AddVideoBeritaActivity" />
+        <activity android:name=".activity.AddVideoBeritaActivity"
+            android:theme="@style/Theme.AngleresProject"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".activity.lokasi.KolamActivity"
             android:parentActivityName=".activity.LokasiActivity" />

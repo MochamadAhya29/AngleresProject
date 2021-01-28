@@ -10,61 +10,60 @@
     tools:context=".activity.AddVideoBeritaActivity">
 
 
-    <EditText
-        android:id="@+id/judul_post"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:hint="Judul"
-        android:padding="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/progressBar_upload"
-        android:inputType="textPersonName|textCapSentences"
-        android:textColor="@android:color/black"/>
+<!--    <EditText-->
+<!--        android:id="@+id/judul_post"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#fff"-->
+<!--        android:hint="Judul"-->
+<!--        android:padding="10dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/progressBar_upload"-->
+<!--        android:inputType="textPersonName|textCapSentences"-->
+<!--        android:textColor="@android:color/black"/>-->
 
-    <EditText
-        android:id="@+id/deskripsi_post"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#fff"
-        android:hint="Deskripsi"
-        android:padding="10dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="@id/judul_post"
-        app:layout_constraintEnd_toEndOf="@id/judul_post"
-        app:layout_constraintTop_toBottomOf="@id/judul_post"
-        android:inputType="textPersonName|textCapSentences"
-        android:textColor="@android:color/black"/>
+<!--    <EditText-->
+<!--        android:id="@+id/deskripsi_post"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#fff"-->
+<!--        android:hint="Deskripsi"-->
+<!--        android:padding="10dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/judul_post"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/judul_post"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/judul_post"-->
+<!--        android:inputType="textPersonName|textCapSentences"-->
+<!--        android:textColor="@android:color/black"/>-->
 
-    <VideoView
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:id="@+id/video_post"
+        android:id="@+id/img_thumbnail"
         android:src="@drawable/ic_add"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/deskripsi_post"
         android:layout_marginTop="5dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnSavePost"
-        app:layout_constraintTop_toBottomOf="@id/video_post"
+        app:layout_constraintTop_toBottomOf="@id/img_thumbnail"
         android:text="Upload"
         android:layout_marginTop="5dp"/>
 
-    <ProgressBar
-        android:id="@+id/progressBar_upload"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:indeterminate="true"
-        android:indeterminateTint="@color/colorPrimary"
-        android:visibility="visible"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="10dp" />
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progressBar_upload"-->
+<!--        style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:indeterminate="true"-->
+<!--        android:indeterminateTint="@color/colorPrimary"-->
+<!--        android:visibility="visible"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:layout_editor_absoluteX="10dp" />-->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/pickVideoFab"

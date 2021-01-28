@@ -1,10 +1,12 @@
 package com.mochamadahya.angleres.activity
 
+import android.app.Activity
 import android.app.ProgressDialog
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.text.TextUtils
 import android.widget.*
 import com.google.android.gms.tasks.Continuation
@@ -18,6 +20,7 @@ import com.google.firebase.storage.StorageTask
 import com.google.firebase.storage.UploadTask
 import com.mochamadahya.angleres.MainActivity
 import com.mochamadahya.angleres.R
+import com.theartofdev.edmodo.cropper.CropImage
 import kotlinx.android.synthetic.main.activity_uploading_video.*
 
 class UploadingVideoActivity : AppCompatActivity() {
@@ -28,6 +31,7 @@ class UploadingVideoActivity : AppCompatActivity() {
 
     private val mediaController: MediaController? = null
     private var videoData: Uri? = null
+    private var imageData: Uri? = null
     private var myUrl = ""
     private var storagePostPicture: StorageReference? = null
 
@@ -37,12 +41,13 @@ class UploadingVideoActivity : AppCompatActivity() {
 
         storagePostPicture = FirebaseStorage.getInstance().reference.child("Post Videos")
 
+        setTitle("Upload Video")
+
         videoview.findViewById<VideoView>(R.id.videoview)
         btnSaveAja.findViewById<Button>(R.id.btnSaveAja)
         progressBar_upload.findViewById<ProgressBar>(R.id.progressBar_upload)
         jdl_post.findViewById<EditText>(R.id.jdl_post)
         desk_post.findViewById<EditText>(R.id.desk_post)
-
 
         videoview.setMediaController(mediaController)
         videoview.start()
@@ -57,13 +62,10 @@ class UploadingVideoActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (resultCode == pick_video || resultCode == RESULT_OK ||
-            data != null || data?.data != null
-        ) {
-
-            videoData = data?.data
-            videoview.setVideoURI(videoData)
-        }
+            if (requestCode == pick_video || resultCode == RESULT_OK || data != null || data?.data != null) {
+                videoData = data?.data
+                videoview.setVideoURI(videoData)
+            }
     }
 
     private fun chooseVideo() {
@@ -93,11 +95,13 @@ class UploadingVideoActivity : AppCompatActivity() {
                 progressDialog.setMessage("Tunggu Sebentar...")
                 progressDialog.show()
 
-                val fileRef =
-                    storagePostPicture!!.child(System.currentTimeMillis().toString() + ".mp4")
+                val fileRef = storagePostPicture!!.child(System.currentTimeMillis().toString() + ".mp4/.3gp")
+
 
                 val uploadTask: StorageTask<*>
                 uploadTask = fileRef.putFile(videoData!!)
+
+
 
                 uploadTask.continueWithTask(Continuation<UploadTask.TaskSnapshot, Task<Uri>> { task ->
                     if (!task.isSuccessful) {
@@ -126,7 +130,7 @@ class UploadingVideoActivity : AppCompatActivity() {
 
                         Toast.makeText(this, "Posting Berhasil", Toast.LENGTH_SHORT).show()
 
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, AddVideoBeritaActivity::class.java)
                         startActivity(intent)
                         finish()
 

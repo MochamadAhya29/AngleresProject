@@ -8,6 +8,7 @@ class Post {
     private var judul: String = ""
     private var description: String = ""
     private var numberlikes: String = ""
+    private var thumbnail: String = ""
 
     constructor()
     constructor(
@@ -17,7 +18,8 @@ class Post {
         publisher: String,
         judul: String,
         description: String,
-        numberlikes: String
+        numberlikes: String,
+        thumbnail: String
     ) {
         this.postid = postid
         this.postimage = postimage
@@ -26,6 +28,7 @@ class Post {
         this.judul = judul
         this.description = description
         this.numberlikes = numberlikes
+        this.thumbnail = thumbnail
     }
 
     //get
@@ -56,6 +59,10 @@ class Post {
         return numberlikes
     }
 
+    fun getThumbnail(): String{
+        return thumbnail
+    }
+
 
 
     //set
@@ -79,6 +86,9 @@ class Post {
     }
     fun setDescription(description: String){
         this.description = description
+    }
+    fun setThumbnail(thumbnail: String){
+        this.thumbnail = thumbnail
     }
 
 }

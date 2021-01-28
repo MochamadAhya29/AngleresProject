@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DataSnapshot
@@ -41,15 +42,17 @@ class PostAdapter(private val mContext: Context, private val mPost: List<Post>)
         val post = mPost[position]
 
 //
-        Picasso.get().load(post.getPostImage()).into(holder.postImage)
+        Glide.with(mContext).load(post.getPostImage()).into(holder.postimage)
+
+
 
 //
         holder.itemView.setOnClickListener {
             val bundle = Bundle()
             bundle.putString("judul", post.getJudul())
             bundle.putString("description", post.getDescription())
-            bundle.putString("like", post.getNumberLikes())
             bundle.putString("postimage", post.getPostImage())
+            bundle.putString("postid", post.getPostId())
 
 
             mContext.startActivity(Intent(mContext, DetailActivity::class.java).putExtras(bundle))
@@ -176,7 +179,7 @@ class PostAdapter(private val mContext: Context, private val mPost: List<Post>)
     class PostViewHolder(itemView: View)
         : RecyclerView.ViewHolder(itemView) {
 
-            var postImage: ImageView = itemView.findViewById(R.id.post_image)
+            var postimage: ImageView = itemView.findViewById(R.id.post_image)
             var likeButton: ImageView = itemView.findViewById(R.id.post_image_like)
             var commentButton: ImageView = itemView.findViewById(R.id.post_image_comment)
             var shareButton: ImageView = itemView.findViewById(R.id.post_image_share)
